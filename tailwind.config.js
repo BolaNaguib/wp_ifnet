@@ -9,7 +9,7 @@ module.exports = {
 		extend: {
 			colors: {
 				main: "#303030",
-				secondary: "#fed700",
+				secondary: "#106eaa",
 			},
 			fontFamily: {
 				body: ["Lobster Two", "cursive"],
