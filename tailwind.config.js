@@ -10,6 +10,7 @@ module.exports = {
 			colors: {
 				main: "#303030",
 				secondary: "#106eaa",
+				orange: "#f1543a",
 			},
 			fontFamily: {
 				body: ["Lobster Two", "cursive"],
