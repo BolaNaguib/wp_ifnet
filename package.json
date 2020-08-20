@@ -48,6 +48,7 @@
     "translate": "gulp translate"
   },
   "dependencies": {
-    "tailwindcss": "^1.7.1"
+    "gulp-postcss": "^8.0.0",
+    "tailwindcss": "^1.7.2"
   }
 }
