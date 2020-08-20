@@ -50,6 +50,32 @@
                 </div>
             </div>
         </div>
+        <!-- START Main header -->
+        <div class="py-4">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-4 gap-6">
+                    <div class="col-span-1">
+                        <img src="<?php echo get_template_directory_uri() ?>/assets/img/logo.jpg" alt="">
+                    </div>
+                    <div class="col-span-2 flex items-center font-semibold justify-center ">
+                        <ul>
+                            <li class="inline-block"><a class="text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out px-2" href="#">Home</a></li>
+                            <li class="inline-block"><a class="text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out px-2" href="#">Services</a></li>
+                            <li class="inline-block"><a class="text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out px-2" href="#">Products</a></li>
+                            <li class="inline-block"><a class="text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out px-2" href="#">Team</a></li>
+                            <li class="inline-block"><a class="text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out px-2" href="#">Blog</a></li>
+                            <li class="inline-block"><a class="text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out px-2" href="#">Success Partners</a></li>
+                            <li class="inline-block"><a class="text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out px-2" href="#">Contact Us</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="col-span-1 flex items-center justify-end">
+                        <a href="#" class="bg-secondary px-4 py-2 text-white hover:bg-gray-800 transition duration-500 ease-in-out font-semibold text-sm"> REQUEST A QUOTE </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END Main header -->
     </nav>
     <!-- END NAVBAR -->
 
