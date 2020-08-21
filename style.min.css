@@ -76,6 +76,10 @@ h3{font-size:1.125rem}
 .listlink:hover::after{width:70px}
 .hoverMenu .showme{-webkit-transform:scale(0);transform:scale(0);-webkit-transition:500ms;transition:500ms}
 .hoverMenu:hover .showme{-webkit-transform:scale(1);transform:scale(1);display:block;-webkit-transition:500ms;transition:500ms}
+#dropDownMenu{-webkit-transform:scale(0);transform:scale(0);-webkit-transition:500ms;transition:500ms}
+#dropDownMenu.showDropDownMenu{-webkit-transform:scale(1);transform:scale(1);-webkit-transition:500ms;transition:500ms}
+.subPhoneDropdown{display:block;height:0;overflow:hidden;-webkit-transition:300ms;transition:300ms}
+.subPhoneDropdown.open{height:100%;-webkit-transition:300ms;transition:300ms}
 .container{width:100%}
 .space-y-0>:not(template) ~ :not(template){--space-y-reverse:0;margin-top:calc(0px * calc(1 - var(--space-y-reverse)));margin-bottom:calc(0px * var(--space-y-reverse))}
 .space-x-0>:not(template) ~ :not(template){--space-x-reverse:0;margin-right:calc(0px * var(--space-x-reverse));margin-left:calc(0px * calc(1 - var(--space-x-reverse)))}

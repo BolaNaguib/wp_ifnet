@@ -109,6 +109,26 @@ h3 {
 		}
 	}
 }
+#dropDownMenu {
+	transform: scale(0);
+	transition: 500ms;
+
+	&.showDropDownMenu {
+		transform: scale(1);
+		transition: 500ms;
+	}
+}
+
+.subPhoneDropdown {
+	display: block;
+	height: 0px;
+	overflow: hidden;
+	transition: 300ms;
+	&.open {
+		height: 100%;
+		transition: 300ms;
+	}
+}
 @tailwind components;
 
 @tailwind utilities;

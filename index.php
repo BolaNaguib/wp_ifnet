@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <!-- START hero -->
-<section class="bg-gray bg-cover bg-center bg-top bg-no-repeat  py-24 h-screen xx relative" style="background-image: url('http://themes.webdevia.com/factory/wp-content/uploads/2016/06/quality.jpg');">
+<section class="bg-gray bg-cover bg-center bg-top bg-no-repeat h-screen xx relative" style="background-image: url('http://themes.webdevia.com/factory/wp-content/uploads/2016/06/quality.jpg');">
     <div class="container mx-auto px-5 h-full flex items-center justify-center relative" style="z-index:9">
         <div class="text-center text-white">
             <span class="font-bold"> THE ULTIMATE GOAL</span>

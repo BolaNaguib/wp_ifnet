@@ -11,7 +11,7 @@
 
 <body>
     <!-- START NAVBAR -->
-    <nav class="fixed w-full bg-white" style="z-index:99">
+    <nav class="fixed w-full bg-white border-b" style="z-index:21">
         <div class="bg-gray-200 py-2">
             <div class="flex justify-between container mx-auto px-4">
                 <div class="flex items-center">
@@ -81,12 +81,89 @@
 
                         </ul>
                     </div>
-                    <div class="col-span-3 lg:col-span-1 flex items-center justify-end">
+                    <div class="hidden lg:col-span-1 lg:flex items-center justify-end">
                         <a href="#" class="bg-secondary px-4 py-2 text-white hover:bg-gray-800 transition duration-500 ease-in-out font-semibold text-sm"> REQUEST A QUOTE </a>
+                    </div>
+                    <div class="-mr-2 flex items-center justify-end md:hidden col-span-3">
+                        <button id="main-menu" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out" id="main-menu" aria-label="Main menu" aria-haspopup="true">
+                            <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
+        </div>
         <!-- END Main header -->
     </nav>
     <!-- END NAVBAR -->
+
+
+    <!-- MENU NAVBAR -->
+    <div id="dropDownMenu" class="fixed top-0 inset-x-0 p-2 transition transform origin-center scale-0 md:hidden z-50">
+        <div class="rounded-lg shadow-md">
+            <div class="rounded-lg bg-white shadow-xs overflow-hidden" role="menu" aria-orientation="vertical" aria-labelledby="main-menu">
+                <div class="px-5 pt-4 flex items-center justify-between">
+                    <div>
+                        <img class="h-8 w-auto" src="<?php echo get_template_directory_uri() ?>/assets/img/logo.jpg" alt="">
+
+                    </div>
+                    <div class="-mr-2">
+                        <button id="menuCloseButton" type="button" class="main-menu inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out" aria-label="Close menu">
+                            <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <style>
+                    .xx {
+                        display: block;
+                        height: 100%;
+                        height: 0px;
+                        overflow: hidden;
+                        transition: 300ms;
+                    }
+                </style>
+                <ul class="px-2 pt-2 pb-3">
+                    <li><a class="flex items-center justify-between font-semibold px-3 py-2 text-gray-700 hover:text-gray-800 hover:bg-gray-100 transition duration-300 ease-in-out px-2" href="#">
+                            <span>Home</span> <span><svg class=" openSubPhone h-4 transform rotate-90" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-chevron-down fa-w-14">
+                                    <path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z" class=""></path>
+                                </svg></span></a>
+                        <ul class="subPhoneDropdown transition duration-300 ease-in-out">
+                            <?php for ($i = 0; $i < 3; $i++) : ?>
+                                <li>
+                                    <a href="#" class="text-sm py-4 block px-4 text-gray-800 hover:bg-gray-100 hover:text-secondary transition duration-300 ease-out">Analytics</a>
+
+                                </li>
+                            <?php endfor; ?>
+                        </ul>
+                    </li>
+                    <li><a class="block font-semibold px-3 py-2 text-gray-700 hover:text-gray-800 hover:bg-gray-100 transition duration-300 ease-in-out px-2" href="#">Services</a></li>
+                    <li><a class="block font-semibold px-3 py-2 text-gray-700 hover:text-gray-800 hover:bg-gray-100 transition duration-300 ease-in-out px-2" href="#">Products</a></li>
+                    <li><a class="block font-semibold px-3 py-2 text-gray-700 hover:text-gray-800 hover:bg-gray-100 transition duration-300 ease-in-out px-2" href="#">Team</a></li>
+                    <li><a class="block font-semibold px-3 py-2 text-gray-700 hover:text-gray-800 hover:bg-gray-100 transition duration-300 ease-in-out px-2" href="#">Blog</a></li>
+                    <li><a class="block font-semibold px-3 py-2 text-gray-700 hover:text-gray-800 hover:bg-gray-100 transition duration-300 ease-in-out px-2" href="#">Success Partners</a></li>
+                    <li><a class="block font-semibold px-3 py-2 text-gray-700 hover:text-gray-800 hover:bg-gray-100 transition duration-300 ease-in-out px-2" href="#">Contact Us</a></li>
+                    <li><a class="flex items-center justify-between font-semibold px-3 py-2 text-gray-700 hover:text-gray-800 hover:bg-gray-100 transition duration-300 ease-in-out px-2" href="#">
+                            <span>Home</span> <span><svg class=" openSubPhone h-4 transform rotate-90" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-chevron-down fa-w-14">
+                                    <path fill="currentColor" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z" class=""></path>
+                                </svg></span></a>
+                        <ul class="subPhoneDropdown transition duration-300 ease-in-out">
+                            <?php for ($i = 0; $i < 3; $i++) : ?>
+                                <li>
+                                    <a href="#" class="text-sm py-4 block px-4 text-gray-800 hover:bg-gray-100 hover:text-secondary transition duration-300 ease-out">Analytics</a>
+
+                                </li>
+                            <?php endfor; ?>
+                        </ul>
+                    </li>
+                </ul>
+                <div>
+                    <a href="#" class=" text-center bg-secondary px-4 py-2 text-white hover:bg-gray-800 transition duration-500 ease-in-out font-semibold text-sm block"> REQUEST A QUOTE </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
