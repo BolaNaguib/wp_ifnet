@@ -34,7 +34,7 @@
                 </div>
                 <div class="flex items-center">
                     <ul class="flex content-center">
-                        <li class="inline-block flex items-center text-gray-600 mr-3">
+                        <li class="hidden md:flex items-center text-gray-600 mr-3">
                             <svg style="min-height: 15px; height:15px" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="envelope" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-envelope fa-w-16">
                                 <path fill="currentColor" d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z" class=""></path>
                             </svg>
@@ -44,7 +44,7 @@
                             <svg style="min-height: 15px; height:15px" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="phone-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-phone-alt fa-w-16">
                                 <path fill="currentColor" d="M497.39 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.66 370.66 0 0 1 130.6 204.11l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112A24.16 24.16 0 0 0 122.6.61l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0-14.01-27.6z" class=""></path>
                             </svg>
-                            <span class="ml-2 text-sm ">Phone: +124 548 698 254</span>
+                            <span class="ml-2 text-sm ">+124 548 698 254</span>
                         </li>
                     </ul>
                 </div>
@@ -57,9 +57,21 @@
                     <div class="col-span-1">
                         <img src="<?php echo get_template_directory_uri() ?>/assets/img/logo.jpg" alt="">
                     </div>
-                    <div class="col-span-2 flex items-center font-semibold justify-center ">
-                        <ul>
-                            <li class="inline-block"><a class="text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out px-2" href="#">Home</a></li>
+                    <div class="hidden col-span-2 lg:flex items-center font-semibold justify-center ">
+                        <ul class="hidden  lg:block">
+                            <li class="inline-block hoverMenu transition duration-300 ease-in-out"><a class="text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out px-2 py-4" href="#">Home</a>
+                                <div class="absolute mt-2 showme  transition duration-300 ease-in-out">
+                                    <div class="rounded-lg shadow overflow-hidden">
+                                        <div class="z-20 bg-white">
+                                            <?php for ($i = 0; $i < 3; $i++) : ?>
+                                                <a href="#" class="text-sm py-4 block px-4 text-gray-800 hover:bg-gray-100 hover:text-secondary transition duration-300 ease-out">Analytics</a>
+                                            <?php endfor; ?>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </li>
                             <li class="inline-block"><a class="text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out px-2" href="#">Services</a></li>
                             <li class="inline-block"><a class="text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out px-2" href="#">Products</a></li>
                             <li class="inline-block"><a class="text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out px-2" href="#">Team</a></li>
@@ -69,7 +81,7 @@
 
                         </ul>
                     </div>
-                    <div class="col-span-1 flex items-center justify-end">
+                    <div class="col-span-3 lg:col-span-1 flex items-center justify-end">
                         <a href="#" class="bg-secondary px-4 py-2 text-white hover:bg-gray-800 transition duration-500 ease-in-out font-semibold text-sm"> REQUEST A QUOTE </a>
                     </div>
                 </div>
