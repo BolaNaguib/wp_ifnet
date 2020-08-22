@@ -1,7 +1,10 @@
 <?php get_header(); ?>
 
-<section class="min-h-64">
-    <h1>Contact</h1>
+<section class=" pt-32 lg:pt-40">
+    <div class="container mx-auto px-5 mt-4 lg:mt-0">
+        <h1>Contact</h1>
+        <div class="breadcrumb"><?php get_breadcrumb(); ?></div>
+    </div>
 </section>
 
 <?php if (have_posts()) : ?>
