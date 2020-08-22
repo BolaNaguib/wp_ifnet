@@ -56,6 +56,7 @@ function my_acf_init()
     if (function_exists('acf_register_block')) {
         add_guttenberg_block('contact');
         add_guttenberg_block('partners');
+        add_guttenberg_block('services');
     }
 }
 
