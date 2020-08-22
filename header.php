@@ -9,7 +9,7 @@
 
 </head>
 
-<body>
+<body class="font-body">
     <!-- START NAVBAR -->
     <nav class="fixed w-full bg-white border-b" style="z-index:21">
         <div class="bg-gray-200 py-2">

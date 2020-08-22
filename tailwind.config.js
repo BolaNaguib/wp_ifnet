@@ -11,7 +11,7 @@ module.exports = {
 				orange: "#f1543a",
 			},
 			fontFamily: {
-				body: ["Lobster Two", "cursive"],
+				body: ["Rubik", "sans-serif"],
 				display: ["Lobster Two", "cursive"],
 				number: ["sans-serif"],
 			},

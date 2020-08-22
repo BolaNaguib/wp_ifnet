@@ -129,6 +129,27 @@ h3 {
 		transition: 300ms;
 	}
 }
+
+.singlePageTitle {
+	&::after {
+		left: 0px;
+		position: absolute;
+		content: "";
+		bottom: 0px;
+		height: 6px;
+		width: 70px;
+		background-color: #eee;
+	}
+	&::before {
+		left: 0px;
+		position: absolute;
+		content: "";
+		bottom: 13px;
+		height: 6px;
+		width: 150px;
+		background-color: #eee;
+	}
+}
 @tailwind components;
 
 @tailwind utilities;

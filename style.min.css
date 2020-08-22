@@ -80,6 +80,8 @@ h3{font-size:1.125rem}
 #dropDownMenu.showDropDownMenu{-webkit-transform:scale(1);transform:scale(1);-webkit-transition:500ms;transition:500ms}
 .subPhoneDropdown{display:block;height:0;overflow:hidden;-webkit-transition:300ms;transition:300ms}
 .subPhoneDropdown.open{height:100%;-webkit-transition:300ms;transition:300ms}
+.singlePageTitle::after{left:0;position:absolute;content:"";bottom:0;height:6px;width:70px;background-color:#eee}
+.singlePageTitle::before{left:0;position:absolute;content:"";bottom:13px;height:6px;width:150px;background-color:#eee}
 .container{width:100%}
 .space-y-0>:not(template) ~ :not(template){--space-y-reverse:0;margin-top:calc(0px * calc(1 - var(--space-y-reverse)));margin-bottom:calc(0px * var(--space-y-reverse))}
 .space-x-0>:not(template) ~ :not(template){--space-x-reverse:0;margin-right:calc(0px * var(--space-x-reverse));margin-left:calc(0px * calc(1 - var(--space-x-reverse)))}
@@ -1831,7 +1833,7 @@ h3{font-size:1.125rem}
 .font-sans{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"}
 .font-serif{font-family:Georgia,Cambria,"Times New Roman",Times,serif}
 .font-mono{font-family:Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}
-.font-body{font-family:Lobster Two,cursive}
+.font-body{font-family:Rubik,sans-serif}
 .font-display{font-family:Lobster Two,cursive}
 .font-number{font-family:sans-serif}
 .font-hairline{font-weight:100}
@@ -6139,7 +6141,7 @@ h3{font-size:1.125rem}
 .sm\:font-sans{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"}
 .sm\:font-serif{font-family:Georgia,Cambria,"Times New Roman",Times,serif}
 .sm\:font-mono{font-family:Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}
-.sm\:font-body{font-family:Lobster Two,cursive}
+.sm\:font-body{font-family:Rubik,sans-serif}
 .sm\:font-display{font-family:Lobster Two,cursive}
 .sm\:font-number{font-family:sans-serif}
 .sm\:font-hairline{font-weight:100}
@@ -10452,7 +10454,7 @@ h3{font-size:1.125rem}
 .md\:font-sans{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"}
 .md\:font-serif{font-family:Georgia,Cambria,"Times New Roman",Times,serif}
 .md\:font-mono{font-family:Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}
-.md\:font-body{font-family:Lobster Two,cursive}
+.md\:font-body{font-family:Rubik,sans-serif}
 .md\:font-display{font-family:Lobster Two,cursive}
 .md\:font-number{font-family:sans-serif}
 .md\:font-hairline{font-weight:100}
@@ -14763,7 +14765,7 @@ h3{font-size:1.125rem}
 .lg\:font-sans{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"}
 .lg\:font-serif{font-family:Georgia,Cambria,"Times New Roman",Times,serif}
 .lg\:font-mono{font-family:Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}
-.lg\:font-body{font-family:Lobster Two,cursive}
+.lg\:font-body{font-family:Rubik,sans-serif}
 .lg\:font-display{font-family:Lobster Two,cursive}
 .lg\:font-number{font-family:sans-serif}
 .lg\:font-hairline{font-weight:100}
@@ -19075,7 +19077,7 @@ h3{font-size:1.125rem}
 .xl\:font-sans{font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"}
 .xl\:font-serif{font-family:Georgia,Cambria,"Times New Roman",Times,serif}
 .xl\:font-mono{font-family:Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}
-.xl\:font-body{font-family:Lobster Two,cursive}
+.xl\:font-body{font-family:Rubik,sans-serif}
 .xl\:font-display{font-family:Lobster Two,cursive}
 .xl\:font-number{font-family:sans-serif}
 .xl\:font-hairline{font-weight:100}
