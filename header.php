@@ -117,15 +117,7 @@
                         </button>
                     </div>
                 </div>
-                <style>
-                    .xx {
-                        display: block;
-                        height: 100%;
-                        height: 0px;
-                        overflow: hidden;
-                        transition: 300ms;
-                    }
-                </style>
+
                 <ul class="px-2 pt-2 pb-3">
                     <li><a class="flex items-center justify-between font-semibold px-3 py-2 text-gray-700 hover:text-gray-800 hover:bg-gray-100 transition duration-300 ease-in-out px-2" href="#">
                             <span>Home</span> <span><svg class=" openSubPhone h-4 transform rotate-90" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="svg-inline--fa fa-chevron-down fa-w-14">

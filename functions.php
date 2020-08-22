@@ -57,7 +57,7 @@ function add_guttenberg_block($blockname)
         'title'                => __($blockname),
         'description'        => __('A custom block.'),
         'render_callback'    => 'section_block_callback',
-        'category'            => 'widgets',
+        'category'            => 'custom_blocks',
         'icon'                => 'admin-comments',
         // 'keywords'            => array($block_name),
     ));
