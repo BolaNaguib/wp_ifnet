@@ -150,6 +150,9 @@ h3 {
 		background-color: #eee;
 	}
 }
+.wp-block {
+	max-width: unset !important;
+}
 @tailwind components;
 
 @tailwind utilities;
