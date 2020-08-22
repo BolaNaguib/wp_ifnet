@@ -3,9 +3,9 @@
 function add_enqueue_styles()
 {
     wp_enqueue_style('google_font',  'https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap');
-    wp_enqueue_script('vendorJS',  get_template_directory_uri() . '/assets/js/vendor/flickity.pkgd.min.js', array(), false, true);
+    // wp_enqueue_script('vendorJS',  get_template_directory_uri() . '/assets/js/vendor/flickity.pkgd.min.js', array(), false, true);
     wp_enqueue_style('theme_style',  get_template_directory_uri() . '/style.min.css', 1);
-    wp_enqueue_style('flickityCSS',  get_template_directory_uri() . '/assets/css/flickity.css', 2);
+    // wp_enqueue_style('flickityCSS',  get_template_directory_uri() . '/assets/css/flickity.css', 2);
 }
 
 
@@ -57,6 +57,7 @@ function my_acf_init()
         add_guttenberg_block('contact');
         add_guttenberg_block('partners');
         add_guttenberg_block('services');
+        add_guttenberg_block('team');
     }
 }
 
@@ -109,5 +110,58 @@ function get_breadcrumb()
         echo '"<em>';
         echo the_search_query();
         echo '</em>"';
+    }
+}
+
+
+
+//Remove Gutenberg Block Library CSS from loading on the frontend
+function smartwp_remove_wp_block_library_css()
+{
+    wp_dequeue_style('wp-block-library');
+    wp_dequeue_style('wp-block-library-theme');
+    wp_dequeue_style('wp-emoji-release');
+}
+add_action('wp_enqueue_scripts', 'smartwp_remove_wp_block_library_css');
+
+
+/**
+ * Disable the emoji's
+ */
+function disable_emojis()
+{
+    remove_action('wp_head', 'print_emoji_detection_script', 7);
+    remove_action('wp_head', 'jquery', 7);
+    remove_action('admin_print_scripts', 'print_emoji_detection_script');
+    remove_action('wp_print_styles', 'print_emoji_styles');
+    remove_action('admin_print_styles', 'print_emoji_styles');
+    remove_filter('the_content_feed', 'wp_staticize_emoji');
+    remove_filter('comment_text_rss', 'wp_staticize_emoji');
+    remove_filter('wp_mail', 'wp_staticize_emoji_for_email');
+
+    // Remove from TinyMCE
+    add_filter('tiny_mce_plugins', 'disable_emojis_tinymce');
+}
+add_action('init', 'disable_emojis');
+
+/**
+ * Filter out the tinymce emoji plugin.
+ */
+function disable_emojis_tinymce($plugins)
+{
+    if (is_array($plugins)) {
+        return array_diff($plugins, array('wpemoji'));
+    } else {
+        return array();
+    }
+}
+
+add_filter('wp_default_scripts', 'change_default_jquery');
+
+function change_default_jquery(&$scripts)
+{
+    if (!is_admin()) {
+        $scripts->remove('jquery');
+        // $scripts->add('jquery', false, array('jquery-core'), '1.10.2');
     }
 }

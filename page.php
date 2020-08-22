@@ -4,7 +4,7 @@
     <div class="container mx-auto px-5 mt-4 lg:mt-0">
         <div class="singlePageTitle relative pb-8">
             <h1 class="text-3xl lg:text-5xl"><?php the_title(); ?></h1>
-            <div class="breadcrumb text-gray-600"><?php get_breadcrumb(); ?>
+            <div class="breadcrumb text-gray-800"><?php get_breadcrumb(); ?>
             </div>
         </div>
     </div>
