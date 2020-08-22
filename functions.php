@@ -58,6 +58,11 @@ function my_acf_init()
         add_guttenberg_block('partners');
         add_guttenberg_block('services');
         add_guttenberg_block('team');
+        add_guttenberg_block('hero');
+        add_guttenberg_block('cards');
+        add_guttenberg_block('iconcards');
+        add_guttenberg_block('backgroundsection');
+        add_guttenberg_block('news');
     }
 }
 
@@ -164,4 +169,27 @@ function change_default_jquery(&$scripts)
         $scripts->remove('jquery');
         // $scripts->add('jquery', false, array('jquery-core'), '1.10.2');
     }
+}
+
+/*********************************************
+ *               ACF Theme Settings           *
+ **********************************************/
+if (function_exists('acf_add_options_page')) {
+    acf_add_options_page(array(
+        'page_title'     => 'Theme General Settings',
+        'menu_title'    => 'Theme Settings',
+        'menu_slug'     => 'theme-general-settings',
+        'capability'    => 'edit_posts',
+        'redirect'        => false
+    ));
+    acf_add_options_sub_page(array(
+        'page_title'     => 'Theme Header Settings',
+        'menu_title'    => 'Header',
+        'parent_slug'    => 'theme-general-settings',
+    ));
+    acf_add_options_sub_page(array(
+        'page_title'     => 'Theme Footer Settings',
+        'menu_title'    => 'Footer',
+        'parent_slug'    => 'theme-general-settings',
+    ));
 }
