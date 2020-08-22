@@ -4,7 +4,6 @@ function add_enqueue_styles()
 {
     wp_enqueue_style('google_font',  'https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap');
     wp_enqueue_script('vendorJS',  get_template_directory_uri() . '/assets/js/vendor/flickity.pkgd.min.js', array(), false, true);
-
     wp_enqueue_style('theme_style',  get_template_directory_uri() . '/style.min.css', 1);
     wp_enqueue_style('flickityCSS',  get_template_directory_uri() . '/assets/css/flickity.css', 2);
 }
@@ -19,7 +18,6 @@ function am_enqueue_admin_styles()
 {
     wp_enqueue_style('google_font',  'https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap');
     wp_enqueue_script('vendorJS',  get_template_directory_uri() . '/assets/js/vendor/flickity.pkgd.min.js', array(), false, true);
-
     wp_enqueue_style('theme_style',  get_template_directory_uri() . '/style.min.css', 1);
     wp_enqueue_style('flickityCSS',  get_template_directory_uri() . '/assets/css/flickity.css', 2);
 }
@@ -57,6 +55,7 @@ function my_acf_init()
     // check function exists
     if (function_exists('acf_register_block')) {
         add_guttenberg_block('contact');
+        add_guttenberg_block('partners');
     }
 }
 

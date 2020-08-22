@@ -132,30 +132,7 @@
 
 
 
-<!-- START partnerts -->
-<section class="py-8">
-    <div class="grid grid-cols-2 lg:grid-cols-6">
-        <?php for ($i = 0; $i < 12; $i++) : ?>
 
-            <div>
-                <div class="relative">
-                    <a class="hovercard" href="#">
-                        <img style="width: 100%;" src="http://inetwork-me.com/wp-content/uploads/2019/05/logo.png" alt="">
-                        <div class="absolute text-white w-full h-full top-0 flex items-end p-4 opacity-0 " style="z-index: 10; background-color: #106eaa94;">
-                            <div><b>INETWORK ME</b>
-                                <br>
-                                <span>EGYPT</span></div>
-
-                        </div>
-                    </a>
-
-                </div>
-            </div>
-        <?php endfor; ?>
-
-    </div>
-</section>
-<!-- END partnerts -->
 
 
 

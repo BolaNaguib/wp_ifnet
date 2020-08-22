@@ -60,6 +60,9 @@ h3 {
 }
 
 .hovercard {
+	& div {
+		transition: 300ms;
+	}
 	&:hover div {
 		opacity: 1;
 		transition: 300ms;
