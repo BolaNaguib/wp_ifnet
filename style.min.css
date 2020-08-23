@@ -125,6 +125,7 @@ h3{font-size:1.125rem}
 .justify-between{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
 .content-center{-ms-flex-line-pack:center;align-content:center}
 .font-body{font-family:Rubik,sans-serif}
+.font-normal{font-weight:400}
 .font-semibold{font-weight:600}
 .font-bold{font-weight:700}
 .h-4{height:1rem}
@@ -216,6 +217,7 @@ h3{font-size:1.125rem}
 .w-full{width:100%}
 .z-20{z-index:20}
 .z-50{z-index:50}
+.gap-0{grid-gap:0;gap:0}
 .gap-2{grid-gap:.5rem;gap:.5rem}
 .gap-6{grid-gap:1.5rem;gap:1.5rem}
 .gap-12{grid-gap:3rem;gap:3rem}
