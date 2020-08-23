@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<?php if (is_home()): ?>
+<?php if (!is_front_page()): ?>
 <section class=" pt-32 lg:pt-40">
     <div class="container mx-auto px-5 mt-4 lg:mt-0">
         <div class="singlePageTitle relative pb-8">

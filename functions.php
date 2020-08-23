@@ -63,6 +63,7 @@ function my_acf_init()
         add_guttenberg_block('iconcards');
         add_guttenberg_block('backgroundsection');
         add_guttenberg_block('news');
+        add_guttenberg_block('categories');
     }
 }
 

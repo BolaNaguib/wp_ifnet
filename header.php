@@ -4,7 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo the_title(); ?></title>
+    <?php if (!is_front_page()): ?>
+        <title><?php wp_title('|',true,'right'); ?> <?php bloginfo('name'); ?></title>
+    <?php else: ?>
+<title><?php bloginfo('name'); ?> | <?php bloginfo( 'description' ) ?></title>
+
+    <?php endif; ?>
     <meta name="title" content=" <?php the_field('meta_title'); ?> " />
     <meta name="keywords" content=" <?php the_field('meta_keywords'); ?> " />
     <meta name="description" content=" <?php the_field('meta_description'); ?> xx" />
@@ -18,6 +23,12 @@ $ig = get_field('instagram','options');
 $phone = get_field('phone', 'options');
 $phone_display = get_field('phone_display', 'options');
 $location = get_field('location', 'options');
+$logo = get_field('logo', 'options');
+$url = home_url( '/' ); 
+$cta_text = get_field ('cta_text','options');
+$cta_link = get_field('cta_link','options');
+
+
 ?>
 <body class="font-body">
     <!-- START NAVBAR -->
@@ -73,7 +84,7 @@ $location = get_field('location', 'options');
             <div class="container mx-auto px-4">
                 <div class="grid grid-cols-4 gap-0">
                     <div class="col-span-1">
-                        <img src="<?php echo get_template_directory_uri() ?>/assets/img/logo.jpg" alt="">
+                    <img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" title="<?php echo $logo['title'] ?>">
                     </div>
                     <div class="hidden col-span-2 lg:flex items-center font-normal justify-center ">
                         <ul class="hidden  lg:block">
@@ -115,7 +126,7 @@ $location = get_field('location', 'options');
                         </ul>
                     </div>
                     <div class="hidden lg:col-span-1 lg:flex items-center justify-end">
-                        <a href="#" class="bg-secondary px-4 py-2 text-white hover:bg-gray-800 transition duration-500 ease-in-out font-semibold text-sm"> REQUEST A QUOTE </a>
+                        <a href="<?php echo $cta_link ?>" class="bg-secondary px-4 py-2 text-white hover:bg-gray-800 transition duration-500 ease-in-out font-semibold text-sm"> <?php echo $cta_text ?> </a>
                     </div>
                     <div class="-mr-2 flex items-center justify-end md:hidden col-span-3">
                         <button id="main-menu" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out" id="main-menu" aria-label="Main menu" aria-haspopup="true">
@@ -186,7 +197,7 @@ $location = get_field('location', 'options');
                     </li>
                 </ul>
                 <div>
-                    <a href="#" class=" text-center bg-secondary px-4 py-2 text-white hover:bg-gray-800 transition duration-500 ease-in-out font-semibold text-sm block"> REQUEST A QUOTE </a>
+                    <a href="<?php echo $cta_link ?>" class=" text-center bg-secondary px-4 py-2 text-white hover:bg-gray-800 transition duration-500 ease-in-out font-semibold text-sm block"> <?php echo $cta_text ?> </a>
 
                 </div>
             </div>

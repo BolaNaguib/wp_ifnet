@@ -1,5 +1,5 @@
 <!-- START Categories -->
-<section class="py-8 bg-black px-4">
+<section class="py-8 bg-black px-4 mt-8">
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-2">
         <?php for ($i = 0; $i < 8; $i++) : ?>
             <div class="overflow-hidden rounded">
