@@ -84,32 +84,34 @@ $location = get_field('location', 'options');
                     $page_link = get_sub_field('page_link');
                   
                 ?>
-               <li class="inline-block">
+  <li class="inline-block hoverMenu transition duration-300 ease-in-out">
                <a class="font-body text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out px-2" 
-               href="<?php echo $page_link ?>"><?php echo $page_title ?></a></li>
+               href="<?php echo $page_link ?>"><?php echo $page_title ?></a>
+               <?php if (have_rows('sub_menu')) : ?>
+                <div class="absolute mt-2 showme  transition duration-300 ease-in-out">
+                                   <div class="rounded-lg shadow overflow-hidden">
+                                       <div class="z-20 bg-white">
+                <?php while (have_rows('sub_menu')) : the_row();
+                    //ACF Fields
+                    $page_title = get_sub_field('page_title');
+                    $page_link = get_sub_field('page_link');
+                  
+                ?>
+                                                <a href="<?php echo $page_link ?>".
+                                                 class="text-sm py-4 block px-4 text-gray-800 hover:bg-gray-100 hover:text-secondary transition duration-300 ease-out"><?php echo $page_title ?></a>
 
   <?php endwhile; ?>
-            <?php endif; ?>
-                            <li class="inline-block hoverMenu transition duration-300 ease-in-out"><a class="text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out px-2 py-4" href="#">Home</a>
-                                <div class="absolute mt-2 showme  transition duration-300 ease-in-out">
-                                    <div class="rounded-lg shadow overflow-hidden">
-                                        <div class="z-20 bg-white">
-                                            <?php for ($i = 0; $i < 3; $i++) : ?>
-                                                <a href="#" class="text-sm py-4 block px-4 text-gray-800 hover:bg-gray-100 hover:text-secondary transition duration-300 ease-out">Analytics</a>
-                                            <?php endfor; ?>
-
                                         </div>
 
                                     </div>
                                 </div>
-                            </li>
-                            <li class="inline-block"><a class="font-body text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out px-2" href="#">Services</a></li>
-                            <li class="inline-block"><a class="text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out px-2" href="#">Products</a></li>
-                            <li class="inline-block"><a class="text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out px-2" href="#">Team</a></li>
-                            <li class="inline-block"><a class="text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out px-2" href="#">Blog</a></li>
-                            <li class="inline-block"><a class="text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out px-2" href="#">Success Partners</a></li>
-                            <li class="inline-block"><a class="text-gray-600 hover:text-gray-800 transition duration-300 ease-in-out px-2" href="#">Contact Us</a></li>
 
+            <?php endif; ?>
+
+                               
+                            </li>
+  <?php endwhile; ?>
+            <?php endif; ?>
                         </ul>
                     </div>
                     <div class="hidden lg:col-span-1 lg:flex items-center justify-end">
