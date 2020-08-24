@@ -60,12 +60,22 @@ h3 {
 }
 
 .hovercard {
+	overflow: hidden;
+	& img{
+		transition: 300ms;
+
+	}
 	& div {
 		transition: 300ms;
 	}
 	&:hover div {
 		opacity: 1;
 		transition: 300ms;
+	}
+	&:hover img{
+		transition: 300ms;
+
+		transform: scale(1.2);
 	}
 }
 

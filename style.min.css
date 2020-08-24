@@ -70,8 +70,11 @@ h3{font-size:1.125rem}
 .forminput input[type="checkbox"]:focus{outline:0}
 .forminput textarea{width:100% !important;font-size:.875rem !important;position:relative !important;border-width:1px !important;border-radius:.25rem !important;padding-top:.5rem !important;padding-bottom:.5rem !important;padding-left:.5rem !important;padding-right:.5rem !important}
 .forminput textarea:focus{outline:0}
+.hovercard{overflow:hidden}
+.hovercard img{-webkit-transition:300ms;transition:300ms}
 .hovercard div{-webkit-transition:300ms;transition:300ms}
 .hovercard:hover div{opacity:1;-webkit-transition:300ms;transition:300ms}
+.hovercard:hover img{-webkit-transition:300ms;transition:300ms;-webkit-transform:scale(1.2);transform:scale(1.2)}
 .sidebartitle::after{content:"";position:absolute;left:30px;top:100%;border:15px solid transparent;border-top-width:13px;border-top-color:rgba(255,255,255,0.1)}
 .listlink::after{background-color:#ffc600;content:"";position:absolute;left:0;top:100%;margin-top:3px;width:30px;height:1px;-webkit-transition:all .3s ease;transition:all .3s ease}
 .listlink:hover::after{width:70px}

@@ -1,6 +1,15 @@
 <?php
 add_theme_support( 'post-thumbnails' ); 
+add_theme_support( 'customize-selective-refresh-widgets' );
 
+
+function add_default_widget(){
+    register_sidebar(array(
+        'name' => 'x',
+        'id' => 'x1'
+    ));
+}
+add_action('widgets_init','add_default_widget');
 
 function add_enqueue_styles()
 {
