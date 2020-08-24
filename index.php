@@ -20,16 +20,27 @@ $id = get_the_ID();
     <?php /* Start the Loop */ ?>
     <?php while (have_posts()) : the_post(); 
         // wordpress vars
-        $title = the_title();
+        $title = get_the_title();
+        $permalink = get_permalink();
+        $thumbnail = get_the_post_thumbnail_url();
+        $excerpt = get_the_excerpt();
     ?>
-    <div class="grid grid-cols-12 gap-6">
+    <div class="grid grid-cols-12 gap-6 ">
     <div class="col-span-2">
-left
+<div class="h-full bg-secondary relative">
+<div class="absolute mr-8 border-t-8  border-b-8 border-l-8 right-0 top-0 -mr-3 mt-6" style='border-color: #ffffff00 rgba(16,110,170,1);'></div>
+
+</div>
     </div>
     <div class="col-span-10">
     <div>
-        <a  class='text-2xl'><?php echo $title ?></a>
-        <?php the_content(); ?>
+    <h3 class='pt-3 pb-4'><a href="<?php echo $permalink;?>" class='text-3xl text-secondary hover:text-gray-700' ><?php echo $title ?></a></h3>
+        
+        <img src="<?php echo $thumbnail; ?>" alt="<?php echo $title ?>" title="<?php echo $title ?>">
+        <p class="py-4">
+        <?php echo $excerpt ?>
+        </p>
+        
     </div>    
         </div>
     <div>
