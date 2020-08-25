@@ -166,6 +166,70 @@ h3 {
 .wp-block {
 	max-width: unset !important;
 }
+
+.widget {
+	& ul{
+		& li{
+			position: relative;
+			padding: 15px 0px;
+			border-bottom: 1px solid #eee;
+			&::before{
+				border-right: 2px solid;
+				content: '';
+				display: block;
+				height: 6px;
+				margin-top: -4px;
+				position: absolute;
+				transform: rotate(135deg);
+				left: 10px;
+				top: 50%;
+				width: 0;
+			}
+			&::after{
+				border-left: 2px solid;
+				content: '';
+				display: block;
+				height: 6px;
+				margin-top: 0px;
+				position: absolute;
+				transform: rotate(40deg);
+				left: 10px;
+				top: 50%;
+				width: 0;
+			}
+			& a{
+				padding-left: 25px;
+			}
+		
+		}
+	}
+}
+a{
+	&:hover{
+		@apply text-secondary transition ease-in-out duration-300 ;
+	}
+}
+.widget {
+	& .searchform{
+		& label{
+			display: none;
+		}
+		& input{
+			width: 70%;
+    background-color: #eee;
+    height: 38px;
+    margin-right: -1%;
+		}
+
+		& #searchsubmit{
+			width: 30%;
+    background-color: #106eaa;
+    color: #fff;
+    padding: 10px 0px;
+		}
+	}
+}
+
 @tailwind components;
 
 @tailwind utilities;

@@ -5,8 +5,13 @@ add_theme_support( 'customize-selective-refresh-widgets' );
 
 function add_default_widget(){
     register_sidebar(array(
-        'name' => 'x',
-        'id' => 'x1'
+        'name' => 'blogsSidebar',
+        'id' => 'blogsSidebar',
+        'description'   => __( 'Widgets in this area will be shown on all posts and pages.', 'textdomain' ),
+        'before_widget' => '<div id="%1$s" class="widget mb-4 %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h2 class="widgettitle pl-2 text-secondary text-3xl pt-6 pb-2">',
+        'after_title'   => '</h2>',
     ));
 }
 add_action('widgets_init','add_default_widget');
