@@ -9,7 +9,7 @@
                 $info = get_sub_field('info');
             ?>
                 <div>
-                    <div class="relative">
+                    <div class="relative overflow-hidden">
                         <a class="hovercard" href="#">
                             <img loading="lazy" style="width: 100%;" src="<?php echo $thumbnail['url'] ?>" alt="<?php echo $thumbnail['alt'] ?>" title="<?php echo $thumbnail['url'] ?>">
                             <div class="absolute text-white w-full h-full top-0 flex items-end p-4 opacity-0 " style="z-index: 10; background-color: #106eaa94;">

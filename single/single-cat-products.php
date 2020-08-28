@@ -70,10 +70,16 @@ $comments = get_comments_number();
       
         
         </div>
-        <div class="flex">
+        <div class="block">
           <button class="flex ml-auto w-full justify-center text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Request a Quote</button>
+        <hr> 
+             <br>
        
         </div>
+        <div class='forminput block'>
+              <?php echo do_shortcode('[contact-form-7 id="8" title="Contact form 1"]') ?>
+
+              </div>
       </div>
     </div>
   </div>
