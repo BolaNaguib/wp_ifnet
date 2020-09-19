@@ -15,7 +15,7 @@
                 ?>
                     <div class="card">
                         <img style="width:100%" loading="lazy" src="<?php echo $pic ?>" alt="<?php echo $image['alt'] ?>" title="<?php echo $image['title'] ?>">
-                        <h4 class="text-xl font-semibold py-4 hr-bb relative"></h4>
+                        <h4 class="text-xl font-semibold py-4 hr-bb relative"><?php echo $title ?></h4>
                         <p class="text-sm text-gray-500"><?php echo $caption ?></p>
                     </div>
                 <?php endwhile; ?>
