@@ -230,6 +230,11 @@ a{
 	}
 }
 
+.iconx{
+	& svg{
+		@apply h-8 text-secondary;
+	}
+}
 @tailwind components;
 
 @tailwind utilities;
