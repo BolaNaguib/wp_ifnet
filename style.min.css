@@ -433,6 +433,7 @@ a:hover{--text-opacity:1;color:#106eaa;color:rgba(16,110,170,var(--text-opacity)
 .max-w-2xl{max-width:42rem}
 .object-cover{-o-object-fit:cover;object-fit:cover}
 .opacity-0{opacity:0}
+.opacity-25{opacity:.25}
 .focus\:outline-none:focus{outline:0}
 .overflow-hidden{overflow:hidden}
 .p-2{padding:.5rem}
@@ -469,6 +470,7 @@ a:hover{--text-opacity:1;color:#106eaa;color:rgba(16,110,170,var(--text-opacity)
 .fixed{position:fixed}
 .absolute{position:absolute}
 .relative{position:relative}
+.inset-0{top:0;right:0;bottom:0;left:0}
 .inset-x-0{right:0;left:0}
 .top-0{top:0}
 .right-0{right:0}
@@ -506,6 +508,8 @@ a:hover{--text-opacity:1;color:#106eaa;color:rgba(16,110,170,var(--text-opacity)
 .w-16{width:4rem}
 .w-auto{width:auto}
 .w-full{width:100%}
+.z-0{z-index:0}
+.z-10{z-index:10}
 .z-20{z-index:20}
 .z-50{z-index:50}
 .gap-0{grid-gap:0;gap:0}

@@ -8,6 +8,7 @@ $hero_bg = get_field('hero_bg') ? get_field('hero_bg') : 'http://themes.webdevia
 ?>
 <!-- START hero -->
 <section class="bg-gray bg-cover bg-center bg-top bg-no-repeat h-screen xx relative" style="background-image: url('<?php echo $hero_bg; ?>');">
+
     <div class="container mx-auto px-5 h-full flex items-center justify-center relative" style="z-index:9">
         <div class="text-center text-white">
             <span class="font-bold"><?php echo $small ?></span>
