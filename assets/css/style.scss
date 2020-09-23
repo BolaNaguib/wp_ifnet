@@ -51,6 +51,12 @@ h3 {
 			@apply outline-none;
 		}
 	}
+	& input[type="submit"]{
+		@apply flex ml-auto w-full justify-center text-white bg-indigo-500 border-0 py-2 px-6 transition duration-300 ease-in-out rounded !important;
+		&:hover{
+			@apply bg-indigo-600 cursor-pointer !important;
+		}
+	}
 	& textarea {
 		@apply w-full text-sm  relative  border rounded  py-2 px-2 !important;
 		&:focus {

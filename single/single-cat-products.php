@@ -19,8 +19,7 @@ $id = get_the_ID();
     <?php /* Start the Loop */ ?>
     <?php while (have_posts()) : the_post(); 
         // wordpress vars
-        $title = get_the_title();
-        $permalink = get_permalink();
+        $title = get_the_title() ? get_the_title() : 'product name' ;
         $thumbnail = get_the_post_thumbnail_url();
         $excerpt = get_the_excerpt();
         $content = get_the_content();
@@ -30,6 +29,9 @@ $id = get_the_ID();
 $post_month = get_the_date( 'M' );
 $post_year = get_the_date( 'y' );
 $comments = get_comments_number();
+// ACF Fields 
+$price = get_field('price') ? get_field('price') : '100'; 
+$description = get_field('description') ? get_field('description') : 'Fam locavore kickstarter distillery. Mixtape chillwave tumeric sriracha taximy chia microdosing tilde DIY. XOXO fam indxgo juiceramps cornhole raw denim forage brooklyn. Everyday carry +1 seitan poutine tumeric. Gastropub blue bottle austin listicle pour-over, neutra jean shorts keytar banjo tattooed umami cardigan.'; 
     ?>
 
 <section class="text-gray-700 body-font overflow-hidden">
@@ -44,7 +46,7 @@ $comments = get_comments_number();
             } ?></h2>
         <h1 class="text-gray-900 text-3xl title-font font-medium mb-1"><?php echo $title ?></h1>
         <div class="flex mb-4 justify-between">
-        <span class="title-font font-medium text-2xl text-secondary">$58.00</span>
+        <span class="title-font font-medium text-2xl text-secondary">$<?php echo $price ?></span>
 
           <span class="flex items-center">
             <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 text-indigo-500" viewBox="0 0 24 24">
@@ -65,13 +67,13 @@ $comments = get_comments_number();
           </span>
          
         </div>
-        <p class="leading-relaxed">Fam locavore kickstarter distillery. Mixtape chillwave tumeric sriracha taximy chia microdosing tilde DIY. XOXO fam indxgo juiceramps cornhole raw denim forage brooklyn. Everyday carry +1 seitan poutine tumeric. Gastropub blue bottle austin listicle pour-over, neutra jean shorts keytar banjo tattooed umami cardigan.</p>
+        <p class="leading-relaxed"><?php echo $description ?></p>
         <div class="flex mt-6 items-center pb-5 border-b-2 border-gray-200 mb-5">
       
         
         </div>
         <div class="block">
-          <button class="flex ml-auto w-full justify-center text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Request a Quote</button>
+          <button class="flex ml-auto w-full justify-center  bg-white border-0 py-2 px-6 focus:outline-none text-black rounded">Request a Quote</button>
         <hr> 
              <br>
        

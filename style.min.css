@@ -68,6 +68,8 @@ h3{font-size:1.125rem}
 .forminput input:focus{outline:0}
 .forminput input[type="checkbox"]{width:auto !important;font-size:.875rem !important;position:relative !important;border-width:1px !important;border-radius:.25rem !important;padding-top:.5rem !important;padding-bottom:.5rem !important;padding-left:.5rem !important;padding-right:.5rem !important}
 .forminput input[type="checkbox"]:focus{outline:0}
+.forminput input[type="submit"]{display:-webkit-box !important;display:-ms-flexbox !important;display:flex !important;margin-left:auto !important;width:100% !important;-webkit-box-pack:center !important;-ms-flex-pack:center !important;justify-content:center !important;--text-opacity:1 !important;color:#fff !important;color:rgba(255,255,255,var(--text-opacity)) !important;--bg-opacity:1 !important;background-color:#667eea !important;background-color:rgba(102,126,234,var(--bg-opacity)) !important;border-width:0 !important;padding-top:.5rem !important;padding-bottom:.5rem !important;padding-left:1.5rem !important;padding-right:1.5rem !important;-webkit-transition-property:background-color,border-color,color,fill,stroke,opacity,-webkit-box-shadow,-webkit-transform !important;transition-property:background-color,border-color,color,fill,stroke,opacity,-webkit-box-shadow,-webkit-transform !important;transition-property:background-color,border-color,color,fill,stroke,opacity,box-shadow,transform !important;transition-property:background-color,border-color,color,fill,stroke,opacity,box-shadow,transform,-webkit-box-shadow,-webkit-transform !important;-webkit-transition-duration:300ms !important;transition-duration:300ms !important;-webkit-transition-timing-function:cubic-bezier(0.4,0,0.2,1) !important;transition-timing-function:cubic-bezier(0.4,0,0.2,1) !important;border-radius:.25rem !important}
+.forminput input[type="submit"]:hover{--bg-opacity:1 !important;background-color:#5a67d8 !important;background-color:rgba(90,103,216,var(--bg-opacity)) !important;cursor:pointer !important}
 .forminput textarea{width:100% !important;font-size:.875rem !important;position:relative !important;border-width:1px !important;border-radius:.25rem !important;padding-top:.5rem !important;padding-bottom:.5rem !important;padding-left:.5rem !important;padding-right:.5rem !important}
 .forminput textarea:focus{outline:0}
 .hovercard{overflow:hidden}
@@ -470,7 +472,6 @@ a:hover{--text-opacity:1;color:#106eaa;color:rgba(16,110,170,var(--text-opacity)
 .fixed{position:fixed}
 .absolute{position:absolute}
 .relative{position:relative}
-.inset-0{top:0;right:0;bottom:0;left:0}
 .inset-x-0{right:0;left:0}
 .top-0{top:0}
 .right-0{right:0}
