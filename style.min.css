@@ -345,7 +345,6 @@ a:hover{--text-opacity:1;color:#106eaa;color:rgba(16,110,170,var(--text-opacity)
 .hover\:bg-gray-100:hover{--bg-opacity:1;background-color:#f7fafc;background-color:rgba(247,250,252,var(--bg-opacity))}
 .hover\:bg-gray-700:hover{--bg-opacity:1;background-color:#4a5568;background-color:rgba(74,85,104,var(--bg-opacity))}
 .hover\:bg-gray-800:hover{--bg-opacity:1;background-color:#2d3748;background-color:rgba(45,55,72,var(--bg-opacity))}
-.hover\:bg-indigo-600:hover{--bg-opacity:1;background-color:#5a67d8;background-color:rgba(90,103,216,var(--bg-opacity))}
 .hover\:bg-secondary:hover{--bg-opacity:1;background-color:#106eaa;background-color:rgba(16,110,170,var(--bg-opacity))}
 .focus\:bg-gray-100:focus{--bg-opacity:1;background-color:#f7fafc;background-color:rgba(247,250,252,var(--bg-opacity))}
 .focus\:bg-gray-700:focus{--bg-opacity:1;background-color:#4a5568;background-color:rgba(74,85,104,var(--bg-opacity))}
@@ -481,6 +480,7 @@ a:hover{--text-opacity:1;color:#106eaa;color:rgba(16,110,170,var(--text-opacity)
 .shadow-md{-webkit-box-shadow:0 4px 6px -1px rgba(0,0,0,0.1),0 2px 4px -1px rgba(0,0,0,0.06);box-shadow:0 4px 6px -1px rgba(0,0,0,0.1),0 2px 4px -1px rgba(0,0,0,0.06)}
 .shadow-lg{-webkit-box-shadow:0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);box-shadow:0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05)}
 .text-center{text-align:center}
+.text-black{--text-opacity:1;color:#000;color:rgba(0,0,0,var(--text-opacity))}
 .text-white{--text-opacity:1;color:#fff;color:rgba(255,255,255,var(--text-opacity))}
 .text-gray-100{--text-opacity:1;color:#f7fafc;color:rgba(247,250,252,var(--text-opacity))}
 .text-gray-400{--text-opacity:1;color:#cbd5e0;color:rgba(203,213,224,var(--text-opacity))}
