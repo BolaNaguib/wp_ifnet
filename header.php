@@ -10,10 +10,11 @@
         <title><?php bloginfo('name'); ?> | <?php bloginfo('description') ?></title>
 
     <?php endif; ?>
+    <?php $favicon = the_field('favicon', 'options') ?>
     <meta name="title" content=" <?php the_field('meta_title'); ?> " />
     <meta name="keywords" content=" <?php the_field('meta_keywords'); ?> " />
     <meta name="description" content=" <?php the_field('meta_description'); ?> " />
-    <link rel="shortcut icon" type="image/x-icon" href="<?php the_field('favicon', 'option') ?>" />
+    <link rel="shortcut icon" type="image/x-icon" href="<?php echo $favicon['url'] ?>" />
 
     <?php wp_head(); ?>
 
