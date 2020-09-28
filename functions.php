@@ -1,20 +1,21 @@
 <?php
-add_theme_support( 'post-thumbnails' ); 
-add_theme_support( 'customize-selective-refresh-widgets' );
+add_theme_support('post-thumbnails');
+add_theme_support('customize-selective-refresh-widgets');
 
 
-function add_default_widget(){
+function add_default_widget()
+{
     register_sidebar(array(
         'name' => 'blogsSidebar',
         'id' => 'blogsSidebar',
-        'description'   => __( 'Widgets in this area will be shown on all posts and pages.', 'textdomain' ),
+        'description'   => __('Widgets in this area will be shown on all posts and pages.', 'textdomain'),
         'before_widget' => '<div id="%1$s" class="widget mb-4 %2$s">',
         'after_widget'  => '</div>',
         'before_title'  => '<h2 class="widgettitle pl-2 text-secondary text-3xl pt-6 pb-2">',
         'after_title'   => '</h2>',
     ));
 }
-add_action('widgets_init','add_default_widget');
+add_action('widgets_init', 'add_default_widget');
 
 function add_enqueue_styles()
 {
@@ -215,30 +216,31 @@ if (function_exists('acf_add_options_page')) {
 /*
 * Define a constant path to our single template folder
 */
-define(SINGLE_PATH, TEMPLATEPATH . '/single');
- 
+define('SINGLE_PATH', TEMPLATEPATH . '/single');
+
 /**
-* Filter the single_template with our custom function
-*/
+ * Filter the single_template with our custom function
+ */
 add_filter('single_template', 'my_single_template');
- 
+
 /**
-* Single template function which will choose our template
-*/
-function my_single_template($single) {
-global $wp_query, $post;
- 
-/**
-* Checks for single template by category
-* Check by category slug and ID
-*/
-foreach((array)get_the_category() as $cat) :
- 
-if(file_exists(SINGLE_PATH . '/single-cat-' . $cat->slug . '.php'))
-return SINGLE_PATH . '/single-cat-' . $cat->slug . '.php';
- 
-elseif(file_exists(SINGLE_PATH . '/single-cat-' . $cat->term_id . '.php'))
-return SINGLE_PATH . '/single-cat-' . $cat->term_id . '.php';
- 
-endforeach;
+ * Single template function which will choose our template
+ */
+function my_single_template($single)
+{
+    global $wp_query, $post;
+
+    /**
+     * Checks for single template by category
+     * Check by category slug and ID
+     */
+    foreach ((array)get_the_category() as $cat) :
+
+        if (file_exists(SINGLE_PATH . '/single-cat-' . $cat->slug . '.php'))
+            return SINGLE_PATH . '/single-cat-' . $cat->slug . '.php';
+
+        elseif (file_exists(SINGLE_PATH . '/single-cat-' . $cat->term_id . '.php'))
+            return SINGLE_PATH . '/single-cat-' . $cat->term_id . '.php';
+
+    endforeach;
 }

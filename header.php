@@ -10,7 +10,7 @@
         <title><?php bloginfo('name'); ?> | <?php bloginfo('description') ?></title>
 
     <?php endif; ?>
-    <?php $favicon = the_field('favicon', 'options') ?>
+    <?php $favicon = get_field('favicon', 'options') ?>
     <meta name="title" content=" <?php the_field('meta_title'); ?> " />
     <meta name="keywords" content=" <?php the_field('meta_keywords'); ?> " />
     <meta name="description" content=" <?php the_field('meta_description'); ?> " />
