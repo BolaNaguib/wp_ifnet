@@ -159,7 +159,7 @@
                     "key": "field_5f40fe3ac1a04",
                     "label": "File",
                     "name": "file",
-                    "type": "file",
+                    "type": "url",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -168,11 +168,8 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array",
-                    "library": "all",
-                    "min_size": "",
-                    "max_size": "",
-                    "mime_types": ""
+                    "default_value": "",
+                    "placeholder": ""
                 },
                 {
                     "key": "field_5f40fe60c1a05",
@@ -213,5 +210,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1599328646
+    "modified": 1601483560
 }
