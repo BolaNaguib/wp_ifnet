@@ -26,14 +26,21 @@ $id = get_the_ID();
                 <?php /* Start the Loop */ ?>
                 <?php while (have_posts()) : the_post();
                     // wordpress vars
+
+                    $fake_author = get_field('author');
+                    $fake_day = get_field('day');
+                    $fake_month = get_field('month');
+                    $fake_year = get_field('year');
                     $title = get_the_title();
                     $permalink = get_permalink();
                     $thumbnail = get_the_post_thumbnail_url();
                     $excerpt = get_the_excerpt();
-                    $author = get_the_author_meta('display_name');
-                    $post_day = get_the_date('d');
-                    $post_month = get_the_date('M');
-                    $post_year = get_the_date('y');
+
+                    $author = $fake_author ? $fake_author :  get_the_author_meta('display_name');
+                    $post_day = $fake_day ? $fake_day :  get_the_date('d');
+                    $post_month = $fake_month ? $fake_month :  get_the_date('M');
+                    $post_year = $fake_year ? $fake_year :  get_the_date('y');
+
                     $comments = get_comments_number();
                 ?>
                     <div class="grid grid-cols-12 gap-6 -mb-6 ">
