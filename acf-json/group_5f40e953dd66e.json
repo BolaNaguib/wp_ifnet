@@ -159,7 +159,7 @@
                     "key": "field_5f40fe3ac1a04",
                     "label": "File",
                     "name": "file",
-                    "type": "url",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -169,7 +169,10 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "placeholder": ""
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 },
                 {
                     "key": "field_5f40fe60c1a05",
@@ -210,5 +213,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1601483560
+    "modified": 1601483920
 }
