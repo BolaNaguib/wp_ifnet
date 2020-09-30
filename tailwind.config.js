@@ -1,8 +1,8 @@
 module.exports = {
-	purge: {
-		enabled: true,
-		content: ["./**/*.php"],
-	},
+	// purge: {
+	// 	enabled: true,
+	// 	content: ["./**/*.php"],
+	// },
 	theme: {
 		extend: {
 			colors: {
@@ -18,8 +18,5 @@ module.exports = {
 		},
 	},
 	variants: {},
-	plugins: [
-		require('@tailwindcss/typography'),
-
-	],
+	plugins: [require("@tailwindcss/typography")],
 };
