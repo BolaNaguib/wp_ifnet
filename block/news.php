@@ -23,10 +23,11 @@ $section_title = get_field('section_title') ? get_field('section_title') : 'News
                 <!-- the loop -->
                 <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
                     <?php
-                    $fake_author = get_field('author');
-                    $fake_day = get_field('day');
-                    $fake_month = get_field('month');
-                    $fake_year = get_field('year');
+                    $id = get_the_ID();
+                    $fake_author = get_field('author', $id);
+                    $fake_day = get_field('day', $id);
+                    $fake_month = get_field('month', $id);
+                    $fake_year = get_field('year', $id);
                     $title = get_the_title();
                     $permalink = get_permalink();
                     $thumbnail = get_the_post_thumbnail_url();
