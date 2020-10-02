@@ -45,7 +45,7 @@ $section_title = get_field('section_title') ? get_field('section_title') : 'News
 
                         <div class="p-6">
                             <div>
-                                <a href="#" class="block text-gray-800 font-semibold text-2xl mt-2 hover:text-gray-600 hover:underline"><?php echo $title ?></a>
+                                <a href="<?php echo $permalink ?>" class="block text-gray-800 font-semibold text-2xl mt-2 hover:text-gray-600 hover:underline"><?php echo $title ?></a>
                                 <p class="text-sm text-gray-600 mt-2"> <?php echo $excerpt ?>
                                 </p>
                             </div>
