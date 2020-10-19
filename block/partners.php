@@ -5,7 +5,7 @@
             <?php while (have_rows('partners')) : the_row();
                 //ACF Fields
                 $thumbnail = get_sub_field('thumbnail');
-                $url = get_sub_field('url')
+                $url = get_sub_field('url');
                 $title = get_sub_field('title');
                 $info = get_sub_field('info');
             ?>
